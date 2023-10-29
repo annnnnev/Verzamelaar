@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $db = new SQLite3('../database.sqlite');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -13,22 +16,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = $result->fetchArray(SQLITE3_ASSOC);
 
     if ($user && password_verify($password, $user['password'])) {
-        echo "U bent succesvol ingelogd en word nu doorgestuurd naar de homepagina.";
+
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['username'] = $user['username'];
+
+        echo "U bent succesvol ingelogd en wordt nu doorgestuurd naar de homepagina.";
         ?>
-            <script>
-                setTimeout(function(){
-                    window.location.href="../index.php"
-                },2000)
-            </script>  
+        <script>
+            setTimeout(function(){
+                window.location.href="../account.php"
+            }, 10)
+        </script>
         <?php
     } else {
         echo "U heeft een verkeerde gebruikersnaam of wachtwoord ingevoerd, probeer het opnieuw.";
         ?>
         <script>
-                setTimeout(function(){
-                    window.location.href="../login.php"
-                },2600)
-        </script>  
+            setTimeout(function(){
+                window.location.href="../login.php"
+            }, 2600)
+        </script>
         <?php
     }
 }

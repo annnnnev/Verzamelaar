@@ -20,6 +20,7 @@
     <div id="main">
         <div id="categories">
             <p>Merken</p>
+            
             <button>Nike</button>
         </div>
         <div>
