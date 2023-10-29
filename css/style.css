@@ -97,16 +97,17 @@ body{
 
 .blokken {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 100%;
+    width: 400px;
     height: 100%;
     margin-top: 75px;
 }
 .blok {
     display: flex;
-    width: 160px;
+    width: 140px;
     height: 150px;
     margin: 5px;
     color: white;
@@ -114,8 +115,16 @@ body{
     font-size: 20px;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .blok a {
     color: white;
     text-decoration: none;
+}
+.blokbody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

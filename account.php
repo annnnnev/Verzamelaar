@@ -14,6 +14,12 @@
             <a href="tools/logout.php">Uitloggen</a>
         </div>
         <div class="blok">Hallo,</div>
+        <div class="blok">
+            <a href="toevoegen.php">Sneaker toevoegen</a>
+        </div>
+        <div class="blok">
+            <a href="delete.php">Sneakers Verwijderen</a>
+        </div>
     </div>
 </body>
 </html>

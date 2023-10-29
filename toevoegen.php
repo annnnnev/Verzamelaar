@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product toevoegen</title>
 </head>
-<body>
+<?php include("tools/header.php") ?>
+<body class="blokbody">
     <form action="upload.php" method="post" enctype="multipart/form-data">
         <input type="file" name="images[]" accept="image/*" multiple required>
         <input type="text" name="names[]" placeholder="Enter names" required>
