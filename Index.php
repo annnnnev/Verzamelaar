@@ -9,7 +9,10 @@
 </head>
 <body>
     <?php
-    include("tools/header.php")
+    include("tools/header.php");
+    // data ophalen uit database
+    $db = new SQLite3('database.sqlite');
+    $result = $db->query('SELECT name, image_paths FROM sneakers ORDER BY RANDOM()');    
     ?>
     <div id="banner">
         <video autoplay muted loop>
@@ -18,13 +21,24 @@
     </div>
 
     <div id="main">
-        <div id="categories">
+        <!-- <div id="categories">
             <p>Merken</p>
             
             <button>Nike</button>
-        </div>
-        <div>
+        </div> -->
+        <div class="shoes">
 
+            <?php
+                while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+                    $name = $row['name'];
+                    $imagePath = $row['image_paths'];
+            
+                    echo '<div class="shoe">';
+                    echo '<h2>' . $name . '</h2>';
+                    echo '<img src="' . $imagePath . '" alt="' . $name . '">';
+                    echo '</div>';
+                }
+            ?>
         </div>
     </div>
 </body>

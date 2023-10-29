@@ -42,6 +42,27 @@ body{
     color: white;
 }
 
+/* random shoes */
+.shoes {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+.shoe {
+    margin: 30px;
+    border-radius: 6px;
+    background-color: rgb(172, 172, 172);
+    padding: 10px;
+    text-align: center;
+    min-width: 400px;
+}
+.shoe img {
+    max-height: 250px;
+    max-width: 250px;
+    margin: 10px;
+    border-radius: 4px;
+}
 
 /* login page css */
 
