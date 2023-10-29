@@ -6,11 +6,20 @@
     <title>Product toevoegen</title>
 </head>
 <?php include("tools/header.php") ?>
-<body class="blokbody">
+<body>
     <form action="upload.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="images[]" accept="image/*" multiple required>
-        <input type="text" name="names[]" placeholder="Enter names" required>
-        <textarea name="descriptions[]" placeholder="Enter descriptions"></textarea>
+        <input type="file" name="image[]" accept="image/*" multiple required>
+        <input type="text" name="name" placeholder="Enter name" required>
+        <select name="brand" required>
+            <option value="Nike">Nike</option>
+            <option value="Adidas">Adidas</option>
+            <option value="New Balance">New Balance</option>
+            <option value="Puma">Puma</option>
+            <option value="Vans">Vans</option>
+            <option value="Converse">Converse</option>
+            <option value="Asics">Asics</option>
+        </select>
+        <textarea name="description" placeholder="Enter description"></textarea>
         <input type="submit" value="Upload">
     </form>
 </body>
