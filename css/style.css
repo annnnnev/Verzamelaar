@@ -47,23 +47,43 @@ body{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    
+    align-items: center;
+    justify-content: center;
 }
 .shoe {
     margin: 30px;
     border-radius: 6px;
-    background-color: rgb(172, 172, 172);
-    padding: 10px;
+    background-color: rgb(211, 211, 211);
+    padding: 5px;
     text-align: center;
-    min-width: 400px;
+    min-width: 300px;
+    height: 325px;
 }
 .shoe img {
-    max-height: 250px;
+    max-height: 225px;
     max-width: 250px;
     margin: 10px;
     border-radius: 4px;
 }
 
+@media (max-width: 800px) {
+    .shoes{
+        margin-top: 10px;
+    }
+    .shoe {
+        margin: 8px;
+        min-width: 150px;
+        max-width: 150px;
+        height: 200px;
+        font-size: 12px;
+    }
+    .shoe img {
+        width: 130px; 
+        height: 100px; 
+        object-fit: cover;
+        object-position: 25% 25%; 
+    }
+}
 /* login page css */
 
     .loginPageCenter{
